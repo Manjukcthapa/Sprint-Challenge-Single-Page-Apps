@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard";
-
+import Styled from "styled-components";
 import axios from "axios";
+
+const Div = Styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+`
+
+
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -23,10 +31,10 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <div>
+    <Div>
       {characters.map(item => {
         return <CharacterCard key={item.id} char={item} />;
       })}
-    </div>
+    </Div>
   );
 }

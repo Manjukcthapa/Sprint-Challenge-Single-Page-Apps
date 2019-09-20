@@ -2,10 +2,10 @@ import React from "react";
 import Styled from "styled-components"
 
 const Div = Styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
 
+height:100px;
+width:200px;
+border:3px solid black;
 
 `
 
