@@ -27,12 +27,12 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 Benifits of using "Client-side routing" are as follows:
-- Everytime we dont need to send data and get request so app will  run faster.
--Smooth transitions and animations between views are easier to implement.
+Answer: - Everytime we dont need to send data and get request so app will  run faster.
+       -Smooth transitions and animations between views are easier to implement.
 
 
 
-> Answer:
+
 
 ## Project Set Up
 
