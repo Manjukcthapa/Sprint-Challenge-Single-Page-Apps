@@ -11,7 +11,7 @@ export default function Router() {
     <div className="page-view ui botton segment active tab">
       <Switch>
         <Route path="/characters" component={CharacterList} />
-        <Route path="/characters" component={LocationList} />
+        <Route path="/locations" component={LocationList} />
         <Route component={WelComePage} />
       </Switch>
     </div>

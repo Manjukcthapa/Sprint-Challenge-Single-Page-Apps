@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CharacterCard from "../components/LocationCard";
+import LocationCard from "../components/LocationCard";
+import axios from "axios";
+
 export default function LocationsList() {
   const [characters, setCharacters] = useState([]);
 
@@ -18,7 +20,7 @@ export default function LocationsList() {
   return (
     <div>
       {characters.map(item => {
-        return <CharacterCard key={item.id} char={item} />;
+        return <LocationCard key={item.id} char={item} />;
       })}
     </div>
   );
