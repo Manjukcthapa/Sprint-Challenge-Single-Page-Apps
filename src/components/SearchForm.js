@@ -4,7 +4,14 @@ export default function SearchForm() {
  
   return (
     <section className="search-form">
-     // Add a search form here
+   <input
+        id="name"
+        type="text"
+        name="textfield"
+        placeholder="Search"
+        value={searchTerm}
+        onChange={handleChange}
+      />
     </section>
   );
 }

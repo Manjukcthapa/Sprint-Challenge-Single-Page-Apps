@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard";
+
 import axios from "axios";
 
 export default function CharacterList() {
@@ -22,15 +23,10 @@ export default function CharacterList() {
   }, []);
 
   return (
-   <div>
+    <div>
       {characters.map(item => {
-          return (
-            <CharacterCard
-              key={item.id}
-              char={item}
-            />
-          );
-        })}
-   </div>
+        return <CharacterCard key={item.id} char={item} />;
+      })}
+    </div>
   );
 }
