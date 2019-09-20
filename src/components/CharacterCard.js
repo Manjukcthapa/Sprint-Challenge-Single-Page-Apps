@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
+
 const Div = Styled.div`
 height:480px;
 width:400px;

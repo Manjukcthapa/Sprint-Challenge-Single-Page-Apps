@@ -6,6 +6,7 @@ const Div = Styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+margin-left:40px;
 `;
 
 export default function LocationsList() {

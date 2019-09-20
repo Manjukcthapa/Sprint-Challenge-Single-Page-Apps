@@ -5,8 +5,8 @@ height:200px;
 width:300px;
 margin-top:60px;
 border: 5px solid grey;
-padding:0px;
-margin-left:50px;
+
+margin-left:70px;
 
 `;
 

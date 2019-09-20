@@ -2,7 +2,10 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import WelComePage from "./WelcomePage";
 import CharacterList from "./CharacterList";
-import LocationList from "./LocationsList"
+import LocationList from "./LocationsList";
+
+
+
 
 export default function Router() {
   
