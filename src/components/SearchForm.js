@@ -9,8 +9,8 @@ export default function SearchForm(props) {
         type="text"
         name="textfield"
         placeholder="Search"
-        // value={searchTerm}
-        // onChange={handleChange}
+        value={props.searchTerm}
+        onChange={props.handleChange}
       />
     </section>
   );

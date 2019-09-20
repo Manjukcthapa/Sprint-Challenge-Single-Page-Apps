@@ -34,11 +34,13 @@ export default function CharacterList() {
       });
   }, []);
 
-  
+  const handleChange = e => {
+    e.preventDefault();
+  }
 
   return (
     <Div>
-      {/* <SearchForm handleChange={handleChange} searchTerm={searchTerm} /> */}
+      <SearchForm handleChange={handleChange} searchTerm={searchTerm} />
       {characters.map(item => {
         return <CharacterCard key={item.id} char={item} />;
       })}
