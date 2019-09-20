@@ -42,8 +42,11 @@ export default function CharacterList() {
   };
 
   return (
-    <Div>
+    <div>
+      <div>
       <SearchForm handleChange={handleChange} searchTerm={searchTerm} />
+      </div>
+      <Div>
       {searchResults.length
         ? searchResults.map(item => {
             return <CharacterCard key={item.id} char={item} />;
@@ -51,6 +54,7 @@ export default function CharacterList() {
         : characters.map(item => {
             return <CharacterCard key={item.id} char={item} />;
           })}
-    </Div>
+        </Div>
+    </div>
   );
 }
