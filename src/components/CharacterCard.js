@@ -16,7 +16,7 @@ margin-left:150px;
 `;
 
 const Img = Styled.img`
-width:400px;
+width:390px;
 height:300px;
 `;
 

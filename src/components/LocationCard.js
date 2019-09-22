@@ -15,7 +15,7 @@ margin-top:20px;
 text-align: center;
 `
 
-export default function CharacterCard(props) {
+export default function LocationCard(props) {
   return (
     <div>
       <div>

@@ -13,8 +13,7 @@ flex-wrap: wrap;
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -23,37 +22,36 @@ export default function CharacterList() {
     axios
       .get(` https://rickandmortyapi.com/api/character/`)
       .then(res => {
-        setCharacters(res.data.results);
+        setCharacters(res.data.results.filter(character =>
+          character.name.toLowerCase().includes(query.toLowerCase())
+        ) );
         console.log("results", res.data.results);
       })
       .catch(error => {
         console.log(error);
       });
-  }, []);
+  }, [query]);
 
   const handleChange = e => {
     e.preventDefault();
-    const searchTerm = e.target.value;
-    console.log(e.target.value);
-    setSearchTerm(searchTerm);
-    setSearchResults(
-      characters.filter(member => member.name.match(searchTerm))
-    );
+    setQuery(e.target.value);
+    // const searchTerm = e.target.value;
+    // console.log(e.target.value);
+    // setSearchTerm(searchTerm);
+    // setSearchResults(
+    //   characters.filter(member => member.name.match(searchTerm))
+    // );
   };
 
   return (
     <div>
       <div>
-      <SearchForm handleChange={handleChange} searchTerm={searchTerm} />
+      <SearchForm handleChange={handleChange} searchTerm={query}/>
       </div>
       <Div>
-      {searchResults.length
-        ? searchResults.map(item => {
-            return <CharacterCard key={item.id} char={item} />;
-          })
-        : characters.map(item => {
-            return <CharacterCard key={item.id} char={item} />;
-          })}
+       {characters.map(item => {
+        return <CharacterCard key={item.id} char={item} />;
+      })}
         </Div>
     </div>
   );
